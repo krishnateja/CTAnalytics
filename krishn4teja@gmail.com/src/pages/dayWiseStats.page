@@ -1,0 +1,36 @@
+<apex:page controller="ChatterHelperUtil">
+
+    <html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+         var data = google.visualization.arrayToDataTable([
+          ['Day', 'No Of Chatter Feeds' ],
+          ['Monday',  {!mDay}   ],
+          ['Tuesday',  {!tDay}],
+          ['Wednesday',  {!wDay}],
+          ['Thursday',  {!thDay}],
+          ['Friday',  {!fDay}],
+          ['Saturday',  {!saDay}],
+          ['Sunday',  {!suDay}]
+        ]);
+
+        var options = {
+          title: 'Chattered - Days of the week',
+          hAxis: {title: 'Year', titleTextStyle: {color: 'red'}}
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div_bar'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div_bar" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>    
+ 
+</apex:page>
