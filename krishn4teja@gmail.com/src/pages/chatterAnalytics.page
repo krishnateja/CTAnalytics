@@ -1,0 +1,18 @@
+<apex:page controller="ChatterHelperUtil" sidebar="false">
+    <apex:form >
+    
+        Chatter Analytics for <b>{!$User.FirstName} {!$User.LastName}</b>
+       
+        <apex:inputText id="membNam" > <!-- value="{!memName}" -->
+             <c:autoComplete autocomplete_textbox="{!$Component.membNam}" objectname="User" />
+        </apex:inputText>
+        
+        <apex:commandButton action="{!viewAnalytics}" value="Show Chatter Analytics"/>
+    
+        <apex:include pageName="noOfAtMentions"/>     
+        <apex:include pageName="listHashTags"/>  
+        <apex:include pageName="dayWiseStats"/>   
+        <apex:include pageName="atMentionUsers"/> 
+    
+    </apex:form>    
+</apex:page>
