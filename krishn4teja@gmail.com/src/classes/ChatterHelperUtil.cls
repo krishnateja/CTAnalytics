@@ -17,6 +17,8 @@ public class ChatterHelperUtil{
     public Integer fDay{set;get;}
     public Integer saDay{set;get;}
     public Integer suDay{set;get;}
+    public Integer linkPostCount{set;get;} 
+    public Integer pollPostCount{set;get;}
     
     
     public ChatterHelperUtil(){
@@ -77,6 +79,8 @@ public class ChatterHelperUtil{
         system.debug('------pieStrATM---------'+pieStrATM); 
         pieStrATM = pieStrATM.substring(0,pieStrATM .length()-1); 
         
+        linkPostCount = [select count() from FeedItem where Type='LinkPost'];
+        pollPostCount = [select count() from FeedItem where Type='PollPost'];
         
         system.debug('---------------'+pieStr );
         system.debug('---------------'+uniqueHasTags);

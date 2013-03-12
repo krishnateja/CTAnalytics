@@ -13,6 +13,7 @@
         <apex:include pageName="listHashTags"/>  
         <apex:include pageName="dayWiseStats"/>   
         <apex:include pageName="atMentionUsers"/> 
-    
+    	<apex:include pageName="totalLinksShared"/> 
+    	<apex:include pageName="totalPollsCreated"/>
     </apex:form>    
 </apex:page>
