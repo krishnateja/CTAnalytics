@@ -21,6 +21,33 @@ public class ChatterHelperUtil{
     public Integer pollPostCount{set;get;}
     public Integer filePostCount{set;get;}
     
+    public Integer var1{set;get;}
+    public Integer var2{set;get;}
+    public Integer var3{set;get;}
+    public Integer var4{set;get;}
+    public Integer var5{set;get;}
+    public Integer var6{set;get;}
+    public Integer var7{set;get;}
+    public Integer var8{set;get;}
+    public Integer var9{set;get;}
+    public Integer var10{set;get;}
+    public Integer var11{set;get;}
+    public Integer var12{set;get;}
+    public Integer var13{set;get;}
+    public Integer var14{set;get;}
+    public Integer var15{set;get;}
+    public Integer var16{set;get;}
+    public Integer var17{set;get;}
+    public Integer var18{set;get;}
+    public Integer var19{set;get;}
+    public Integer var20{set;get;}
+    public Integer var21{set;get;}
+    public Integer var22{set;get;}
+    public Integer var23{set;get;}
+    public Integer var24{set;get;}
+    
+    
+    
     public ChatterHelperUtil(){
         u = Userinfo.getUserId();
         User usr = [select id,name from User where id=:u];
@@ -82,6 +109,35 @@ public class ChatterHelperUtil{
         linkPostCount = [select count() from FeedItem where Type='LinkPost'];
         pollPostCount = [select count() from FeedItem where Type='PollPost'];
         filePostCount = [select count() from FeedItem where Type='ContentPost'];
+        
+        
+        var1 = [select count() from Posted_Details__c where Time__c ='1'];
+        var2 = [select count() from Posted_Details__c where Time__c ='2'];
+        var3 = [select count() from Posted_Details__c where Time__c ='3'];
+        var4 = [select count() from Posted_Details__c where Time__c ='4'];
+        var5 = [select count() from Posted_Details__c where Time__c ='5'];
+        var6 = [select count() from Posted_Details__c where Time__c ='6'];
+        var7 = [select count() from Posted_Details__c where Time__c ='7'];
+        var8 = [select count() from Posted_Details__c where Time__c ='8'];
+        var9 = [select count() from Posted_Details__c where Time__c ='9'];
+        var10 = [select count() from Posted_Details__c where Time__c ='10'];
+        var11 = [select count() from Posted_Details__c where Time__c ='11'];
+        var12 = [select count() from Posted_Details__c where Time__c ='12'];
+        var13 = [select count() from Posted_Details__c where Time__c ='13'];        
+        var14 = [select count() from Posted_Details__c where Time__c ='14'];
+        var15 = [select count() from Posted_Details__c where Time__c ='15'];
+        var16 = [select count() from Posted_Details__c where Time__c ='16'];
+        var17 = [select count() from Posted_Details__c where Time__c ='17'];
+        var18 = [select count() from Posted_Details__c where Time__c ='18'];
+        var19 = [select count() from Posted_Details__c where Time__c ='19'];
+        var20 = [select count() from Posted_Details__c where Time__c ='20'];
+        var21 = [select count() from Posted_Details__c where Time__c ='21'];        
+        var22 = [select count() from Posted_Details__c where Time__c ='22'];
+        var23 = [select count() from Posted_Details__c where Time__c ='23'];
+        var24 = [select count() from Posted_Details__c where Time__c ='24'];
+        
+        
+        
         system.debug('-------linkPostCount --------'+linkPostCount );
         system.debug('-------pollPostCount --------'+pollPostCount );
         

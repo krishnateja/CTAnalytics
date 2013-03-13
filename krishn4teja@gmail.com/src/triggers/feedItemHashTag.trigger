@@ -66,6 +66,7 @@ trigger feedItemHashTag on FeedItem (after insert) {
         Posted_Details__c pd = new Posted_Details__c();
         pd.body__c = fi.body;
         pd.Day__c = dayOfWeek;
+        pd.Time__c = string.valueof(Datetime.now().hour());
         insert pd; 
         
         integer atmCount=0;

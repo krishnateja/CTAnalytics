@@ -13,6 +13,7 @@
         <apex:include pageName="totalLinksShared"/> 
         <apex:include pageName="totalPollsCreated"/>  
         <apex:include pageName="totalFilesCreated"/> 
+        <apex:include pageName="hourWiseStats"/> 
         <apex:include pageName="listHashTags"/>  
         <apex:include pageName="dayWiseStats"/>   
         <apex:include pageName="atMentionUsers"/> 
