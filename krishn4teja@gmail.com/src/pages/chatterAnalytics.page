@@ -9,11 +9,13 @@
         
         <apex:commandButton action="{!viewAnalytics}" value="Show Chatter Analytics"/>
     
-        <apex:include pageName="noOfAtMentions"/>     
+        <apex:include pageName="noOfAtMentions"/>   
+        <apex:include pageName="totalLinksShared"/> 
+        <apex:include pageName="totalPollsCreated"/>  
+        <apex:include pageName="totalFilesCreated"/> 
         <apex:include pageName="listHashTags"/>  
         <apex:include pageName="dayWiseStats"/>   
         <apex:include pageName="atMentionUsers"/> 
-    	<apex:include pageName="totalLinksShared"/> 
-    	<apex:include pageName="totalPollsCreated"/>
+       
     </apex:form>    
 </apex:page>

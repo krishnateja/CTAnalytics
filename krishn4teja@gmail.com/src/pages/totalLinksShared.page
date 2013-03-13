@@ -12,7 +12,7 @@
             ]);
     
             var options = {
-              title: 'No of time user is @-mentioned',	
+              title: 'Total No of Links Shared',  
               width: 400, height: 220,
               redFrom: 90, redTo: 100,
               yellowFrom:75, yellowTo: 90,

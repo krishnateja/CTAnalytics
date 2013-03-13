@@ -8,11 +8,11 @@
           function drawChart() {
             var data = google.visualization.arrayToDataTable([
               ['Label', 'Value'],
-              ['', {!contentPostCount }]          
+              ['', {!linkPostCount }]          
             ]);
     
             var options = {
-              title: 'No of files created',	
+              title: 'No of time user is @-mentioned',	
               width: 400, height: 220,
               redFrom: 90, redTo: 100,
               yellowFrom:75, yellowTo: 90,

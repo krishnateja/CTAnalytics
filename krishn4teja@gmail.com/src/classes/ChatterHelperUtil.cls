@@ -19,7 +19,7 @@ public class ChatterHelperUtil{
     public Integer suDay{set;get;}
     public Integer linkPostCount{set;get;} 
     public Integer pollPostCount{set;get;}
-    public Integer contentPostCount{set;get;}
+    public Integer filePostCount{set;get;}
     
     public ChatterHelperUtil(){
         u = Userinfo.getUserId();
@@ -81,7 +81,9 @@ public class ChatterHelperUtil{
         
         linkPostCount = [select count() from FeedItem where Type='LinkPost'];
         pollPostCount = [select count() from FeedItem where Type='PollPost'];
-        contentPostCount = [select count() from FeedItem where Type='ContentPost'];
+        filePostCount = [select count() from FeedItem where Type='ContentPost'];
+        system.debug('-------linkPostCount --------'+linkPostCount );
+        system.debug('-------pollPostCount --------'+pollPostCount );
         
         system.debug('---------------'+pieStr );
         system.debug('---------------'+uniqueHasTags);
