@@ -1,0 +1,85 @@
+<apex:page controller="saveArticleController" showHeader="false" sidebar="false">
+  <apex:stylesheet value="/apex/cssStyles"/>
+  <div id='mainDiv'> <a href="homePage">
+    <div id="header"> </div>
+    </a>
+    <div id="midDiv">
+      <h2>We Appreciate you for Choosing to Share your knowledge</h2>
+      <div class="knTools"> <a href="/apex/homePage">
+        <div class="search"></div>
+        </a>
+        <div class="browse"></div>
+        <a href="/apex/saveArticle">
+        <div class="share shareActive"></div>
+        </a>
+        <table cellpadding="0" cellspacing="0" width="100%">
+          <tr>
+            <td><apex:form enctype="multipart/form-data" >
+                <apex:pageBlock rendered="{!saveFlag}" >
+                  <table cellpadding="2" cellspacing="2" width="100%" class="artTbl">
+                    <tr>
+                      <td width="18%"><apex:message /></td>
+                      <td colspan="2"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                      <td valign="top">Title</td>
+                      <td colspan="2"><apex:inputText value="{!Title}" /></td>
+                    </tr>
+                    <tr>
+                      <td valign="top">Editiors Comments </td>
+                      <td colspan="2"><apex:inputTextarea value="{!Des}"/></td>
+                    </tr>
+                    <tr>
+                      <td valign="top">URL </td>
+                      <td colspan="2"><apex:inputText value="{!share}" /></td>
+                    </tr>
+                    <tr>
+                      <td valign="top">&nbsp;</td>
+                      <td colspan="2"><apex:selectRadio value="{!btn}"   required="true" styleClass="rbBg" >
+                          <span><apex:selectoption itemLabel="Share" itemValue="Share" > </apex:selectoption></span>
+                         <span> <apex:selectoption itemLabel="Embed" itemValue="Embed" ></apex:selectoption></span>
+                        </apex:selectradio></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"> Upload PDF </td>
+                      <td colspan="2">
+                      <div class="uploadBtn">
+                      <apex:inputFile value="{!attachment.body}" filename="{!attachment.name}"  title="Attachment" styleclass="browseBtn" />
+                      
+                      </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                       </td>
+                      <td width="14%"><apex:commandButton value="Preview" action="{!nextPage}" styleClass="sBtn" /></td>
+                      <td width="68%"> <apex:commandButton value="save"  action="{!dosave}" styleClass="sBtn" /></td>
+                    </tr>
+                  </table>
+                </apex:pageBlock>
+                <apex:pageblock rendered="{!previewFlag}"> Title :
+                  <apex:outputText >{!Title }</apex:outputText>
+                  Description  :
+                  <apex:outputText styleClass="artTblTArea"  >{!Des}</apex:outputText>
+                </apex:pageblock>
+              </apex:form></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="footer">
+      <ul>
+        <a href="#">
+        <li class="takeTour">Take a Tour</li>
+        </a> <a href="#">
+        <li class="feedBack">Feedback</li>
+        </a> <a href="#">
+        <li class="chatter">Chatter</li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</apex:page>

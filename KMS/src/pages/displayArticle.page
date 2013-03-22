@@ -1,0 +1,4 @@
+<apex:page standardController="Article__c" extensions="displayArticleController">
+    <apex:outputText >{!Article__c.Title__c}</apex:outputText>  
+    <apex:outputText >{!Article__c.Description__c}</apex:outputText>  
+</apex:page>

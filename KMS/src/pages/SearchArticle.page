@@ -1,0 +1,38 @@
+<apex:page controller="SearchArticleController">
+    <apex:form >
+        <apex:selectList value="{!choosenType}" title="Choose a country" size="1">
+            <apex:selectOptions value="{!items}"/>
+        </apex:selectList>
+        <apex:inputText value="{!artName}"/>
+        <apex:commandButton value="Search" action="{!search}"/>
+        
+        <apex:repeat value="{!dataSetAll}" var="all">
+            <apex:outputLink value="/apex/ArticleDetailPage?id={!all.f1}"> <apex:outputText value="{!all.f2}" /> </apex:outputLink>
+            <apex:outputText value="{!all.f3}" />
+        </apex:repeat>
+       <apex:repeat value="{!dataSetOne}" var="bp">
+            <apex:outputLink value="/apex/ArticleDetailPage?id={!bp.f1}"> <apex:outputText value="{!bp.f2}" /></apex:outputLink>
+            <apex:outputText value="{!bp.f3}" />
+        </apex:repeat>
+        <apex:repeat value="{!dataSetTwo}" var="co">
+            <apex:outputLink value="/apex/ArticleDetailPage?id={!co.f1}"> <apex:outputText value="{!co.f2}" /></apex:outputLink>
+            <apex:outputText value="{!co.f3}" />
+        </apex:repeat>
+        <apex:repeat value="{!dataSetThree}" var="kv">
+            <apex:outputLink value="/apex/ArticleDetailPage?id={!kv.f1}"> <apex:outputText value="{!kv.f2}" /></apex:outputLink>
+            <apex:outputText value="{!kv.f3}" />
+        </apex:repeat>
+        
+        <hr />
+        
+         All : {!allNumber}   <br /> 
+        Code Share : {!csNumber}    <br />
+        Best Practices : {!bpNumber}    <br />
+        Knowledge Videos : {!kvNumber}    <br />
+        
+        
+        
+        
+        
+    </apex:form>
+</apex:page>

@@ -1,0 +1,304 @@
+<apex:page contentType="text/css" standardStylesheets="false" > 
+ body {
+background:#e4e4e4 url('{!$Resource.homePBg}') repeat-x;
+center;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif !important
+}
+#mainDiv {
+    width:980px;
+    margin:0 auto;
+}
+#header {
+    float:left;
+    width:100%;
+    background:url('{!$Resource.titleImg}')no-repeat;
+    width:404px;
+    height:91px;
+    margin:16px 0 0 -2px
+}
+#midDiv {
+    float:left;
+    width:100%;
+}
+#midDivInner {
+    float:left;
+    width:100%;
+    height:min-500px;
+background-color:#c4c4c4 padding:10px;
+}
+#midDiv h2 {
+    text-align:center;
+    width:98%;
+    padding:20px 10px;
+    font-size:28px;
+    font-weight:normal;
+    display:block;
+    color:#202224;
+}
+.knTools {
+    float:left;
+    background:url('{!$Resource.toolsBg}')no-repeat;
+    width:100%;
+   
+    margin-top:2px;
+}
+.knTools .search {
+    background:url('{!$Resource.toolsIcon}') no-repeat;
+    width:135px;
+    height:119px;
+    cursor:pointer;
+    margin:20px 80px 0 80px;
+    float:left
+}
+.knTools .search:hover {
+    background:url('{!$Resource.toolsIcon}') no-repeat 0px -121px;
+    width:135px;
+    height:119px;
+}
+.knTools .searchActive {
+    background:url('{!$Resource.toolsIcon}') no-repeat 0px -121px;
+    width:135px;
+    height:119px;
+}
+.knTools .browse {
+    background:url('{!$Resource.toolsIcon}') no-repeat -235px -0px;
+    width:135px;
+    height:119px;
+    cursor:pointer;
+   margin:20px 80px 0 80px;
+    float:left
+}
+.knTools .browse:hover {
+    background:url('{!$Resource.toolsIcon}') no-repeat -235px -121px;
+    width:135px;
+    height:119px;
+}
+.knTools .share {
+    background:url('{!$Resource.toolsIcon}') no-repeat -466px -0px;
+    width:135px;
+    height:119px;
+    cursor:pointer;
+    margin:20px 80px 0 80px;
+    float:left
+}
+.knTools .share:hover {
+    background:url('{!$Resource.toolsIcon}') no-repeat -466px -121px;
+    width:135px;
+    height:119px;
+}
+.knTools .searchBox {
+    /*background:url('{!$Resource.searchBg}') center 10px;height:240px;*/ height:97px;
+    width:788px;
+   margin:0 auto;
+    position:relative;
+
+}
+.btnBar {
+    width:91%;
+    margin:0 auto;
+    height:140px;
+}
+.knTools .searchBox input[type='text'] {
+    width:512px;;
+    border:solid 8px #dfdfdf;
+    height:50px;
+    color:#999;
+    font-size:22px;
+    background:#fff url('{!$Resource.searchIcon}') no-repeat right;
+    padding: 10px 10px 10px 250px;
+    position: relative;
+    
+}
+.btn {
+ 
+    
+}
+
+
+.searchBtn{
+    height: 70px !important;
+    margin-left: 1px !important;
+    background: #333 !important;
+    color:#fff !important;
+    font-size:18px !important;
+    -moz-border-radius:0 !important;
+-webkit-border-radius: 0 !important;
+border-radius: 0 !important;
+right: 7px;
+width: 107px !important;
+position: absolute !important;
+z-index: 10 !important;
+top: 7px
+
+}
+#footer {
+    background:url('{!$Resource.footBg}') center;
+    float:left;
+    height:150px;
+    width:100%;
+    margin-top:40px;
+}
+#footer ul li {
+    list-style:none;
+    float:left;
+    line-height:135px;
+    padding-left:120px;
+    font-weight:bold;
+    font-size:25px;
+}
+.innerHeight {
+    min-height:500px;
+}
+#footer .takeTour {
+    background:url('{!$Resource.footerIcon}')no-repeat;
+    width:155px;
+    height:130px;
+}
+#footer .feedBack {
+    background:url('{!$Resource.footerIcon}')no-repeat 0 -123px;
+    width:155px;
+    height:130px;
+}
+#footer .chatter {
+    background:url('{!$Resource.footerIcon}')no-repeat 0 -255px;
+    width:155px;
+    height:130px;
+}
+.selectStyle {
+    position: absolute;
+    font-size:20px;
+    left: 9px;
+    padding: 17px 10px;
+    top: 16px;
+    width: 207px;
+    z-index: 1;
+    border:none;
+}
+.charan {
+    background:red;
+}
+.resultDiv {
+    text-align:left;
+   
+    width:842px;
+    position:relative;
+    z-index:0;
+    top:-18px;
+    left:104px;
+}
+.resultDiv a {
+    text-align:left;
+    padding:8px 0px 0 15px;
+    font-size:14px;
+    display:block;
+    width:90%;
+    position:relative;
+    background-color:#fff;
+   
+}
+.resultDiv span {
+    background-color:#fff;
+    width:89%;
+    display:block;
+    padding:0 8px 5px 15px;
+    color:#999;
+    font-style:italic;
+    font-size:11px;
+}
+.resultDiv inputText {
+    background-color:#fff;
+}
+.textClr {
+    background-color:#fff;
+    display:block;
+}
+.btn {
+    position: relative;
+    z-index: 2;
+}
+a {
+    ourline:none;
+}
+.midTable {
+    margin:10px 20px;
+    color:#666 !important;
+    font-size:16px;
+}
+.midTable b {
+    background-image:url('{!$Resource.tagBg}');
+    width:192px;
+    height:49px;
+    text-indent: 22px;
+    display: block;
+    line-height: 51px;
+    color:#666;
+}
+.bPageBlock {
+    border-top:none;
+    border:none !important;
+}
+.secondaryPalette.bPageBlock {
+    background-color:transparent !important;
+    border:none !important;
+}
+input[type='radio'] {
+    margin:0
+}
+.rbBg {
+    background:url('{!$Resource.radioBg}') no-repeat;
+    font-size:20px;
+}
+.rbBg label {
+    padding-right:14px;
+    color:#666 !important;
+    height:30px
+}
+.artTbl {
+    font-size:16px !important;
+    color:#666 !important;
+}
+.artTbl td {
+    color:#666 !important;
+}
+.artTbl input {
+    padding:8px;
+    border:solid 1px #999;
+    width:400px;
+}
+.artTbl input[type='radio'] {
+    padding:8px;
+    border:solid 1px #999;
+    width:14px;
+}
+.artTbl input[type='file'] {
+    border:none !important;
+}
+textarea {
+    border:solid 1px #999;
+    margin:0;
+    width:412px;
+    height:80px;
+}
+.sBtn {
+    margin-top:20px !important;
+}
+.browseBtn {
+    margin-left:-145px;
+    opacity:0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+.uploadBtn {
+    background-image:url('{!$Resource.uploadBtn}');
+    width:138px;
+    height:34px;
+    cursor:pointer;
+    overflow:hidden;
+    display:block;
+}
+.selectHead {
+}
+.pbBody {
+    margin-top:0 !important;
+}
+</apex:page>

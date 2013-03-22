@@ -1,0 +1,32 @@
+<apex:page standardController="Article__c" extensions="SSETransitionclass" showHeader="false" sidebar="false">
+<script type="text/CSS">
+</script>
+
+
+<apex:form >
+ <apex:pageBlock title="Article Details">
+ <table>
+ <tr>
+ <td> Title </td><td>
+ <apex:inputText value="{!Title}"/></td></tr> 
+ <tr><td> Description  </td><td><apex:inputTextarea value="{!Des}"/></td></tr>
+ <tr><td> 
+    <apex:selectRadio value="{!btn}" layout="pageDirection"  required="true">
+            <apex:selectoption itemLabel="Share" itemValue="Share"> </apex:selectoption>
+            <apex:selectoption itemLabel="Embed" itemValue="Embed"></apex:selectoption>
+       </apex:selectradio></td></tr>
+  <tr><td><apex:inputText value="{!share}" style="position:absolute;margin-top:-45px;margin-left:75px;"/></td></tr>
+<tr> <td><apex:inputText value="{!Embed}" style="position:absolute;margin-top:-25px;margin-left:75px;"/></td></tr>
+
+<tr><td><b> Attachments</b><apex:inputFile value="{!myfile.body}" fileName="{!myfile.Name}" /></td></tr>
+           
+  <tr><td>  <apex:commandButton value="view" action="{!viewpdf}"/> </td></tr> 
+  
+<tr><td><apex:commandButton value="save"  action="{!dosave}"/></td></tr>
+ <tr><td>  <apex:commandButton value="Preview" action="{!preview}"/> </td></tr> 
+</table>
+</apex:pageBlock>
+
+  </apex:form>
+
+</apex:page>

@@ -1,0 +1,73 @@
+<apex:page showHeader="false" sidebar="false" controller="SearchArticleController">
+<apex:stylesheet value="/apex/cssStyles"/>
+ 
+  
+   <div id='mainDiv'>
+   
+       <a href="homePage">
+       <div id="header">
+       
+       </div></a>
+       
+       <div id="midDiv">
+           <h2>We are happy to share knowledge with you</h2>
+           <div class="knTools">
+               <apex:form >
+               <div class='btnBar'>
+               <div class="search searchActive"></div>
+               <div class="browse"></div>
+               <div class="share"><a href="/apex/saveArticle"></a></div>
+               </div>
+               <div class="searchBox">
+                  <apex:selectList value="{!choosenType}" styleClass="selectStyle" title="Choose a country" size="1">
+                       <apex:selectOptions value="{!items}"/>
+                   </apex:selectList>
+                             
+                   <apex:inputText value="{!artName}"  />
+                    <apex:commandButton value="Search" styleClass="searchBtn" action="{!search}"/>
+               </div>
+               
+              
+       <div>      
+       <apex:repeat value="{!dataSetAll}" var="all">
+            <apex:outputLink value="/apex/ArticleDetailPage?id={!all.f1}"> <apex:outputText styleClass="charan" value="{!all.f2}" /> </apex:outputLink>
+            <span><apex:outputText value="{!all.f3}" styleClass="textClr" /></span>
+            
+          
+        </apex:repeat>
+        </div>
+        <div  class="resultDiv">
+       <apex:repeat value="{!dataSetOne}" var="bp">
+            <apex:outputLink value="/apex/ArticleDetailPage?id={!bp.f1}"> <apex:outputText value="{!bp.f2}" /></apex:outputLink>
+            <span><apex:outputText value="{!bp.f3}"  /></span>
+        </apex:repeat>
+        <apex:repeat value="{!dataSetTwo}" var="co">
+            <apex:outputLink value="/apex/ArticleDetailPage?id={!co.f1}"> <apex:outputText value="{!co.f2}" /></apex:outputLink>
+            <span><apex:outputText value="{!co.f3}" /></span>
+        </apex:repeat>
+        <apex:repeat value="{!dataSetThree}" var="kv">
+            <apex:outputLink value="/apex/ArticleDetailPage?id={!kv.f1}"> <apex:outputText value="{!kv.f2}" /></apex:outputLink>
+           <span> <apex:outputText value="{!kv.f3}" /></span>
+        </apex:repeat>
+            </div>     
+           </apex:form>
+           </div>
+       
+        </div>
+       
+       <div id="footer">
+           <ul>
+               <a href="#"><li class="takeTour">Take a Tour</li></a>
+               
+               <a href="#"><li class="feedBack">Feedback</li></a>
+               
+              <a href="#"> <li class="chatter">Chatter</li></a>
+           </ul>
+       
+       </div>
+           
+      
+   
+   </div>
+       
+</apex:page>

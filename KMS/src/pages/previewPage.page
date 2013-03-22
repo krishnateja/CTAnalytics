@@ -1,0 +1,46 @@
+<apex:page controller="saveArticleController" showHeader="false" sidebar="false">
+  <apex:stylesheet value="/apex/cssStyles"/>
+  <div id='mainDiv'> <a href="homePage">
+    <div id="header"> </div>
+    </a>
+    <div id="midDiv">
+      <h2>We Appreciate you for Choosing to Share your knowledge</h2>
+      <div class="knTools"> <a href="/apex/homePage">
+        <div class="search"></div>
+        </a>
+        <div class="browse"></div>
+        <a href="/apex/saveArticle">
+        <div class="share shareActive"></div>
+        </a>
+        <table cellpadding="2" cellspacing="2" width="100%" class="midTable">
+ <tr>
+ <td width="13%"><b>Description :</b></td>
+    <td width="87%"> <apex:outputtext value="{!Des}"></apex:outputtext></td></tr>
+  <tr>  <td><b>Title :</b></td>
+    <td><apex:outputText value="{!Title}"></apex:outputText> </td></tr>
+   <tr><td><b>Share/Embed :</b></td>
+   <td><apex:outputText value="{!btn}"></apex:outputText> </td></tr>
+   <tr>
+     <td>&nbsp;</td>
+     <td><apex:form >
+   <apex:commandButton value="BACK" action="{!backPage}"/>
+   </apex:form></td>
+   </tr>
+   
+        </table>
+   
+      </div>
+    </div>
+    <div id="footer">
+      <ul>
+        <a href="#">
+        <li class="takeTour">Take a Tour</li>
+        </a> <a href="#">
+        <li class="feedBack">Feedback</li>
+        </a> <a href="#">
+        <li class="chatter">Chatter</li>
+        </a>
+      </ul>
+    </div>
+  </div>
+</apex:page>
